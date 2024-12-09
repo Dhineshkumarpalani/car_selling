@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<title>Login Car Website</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+		
+		
+	</head>
+	<style>
+	body{
+	
+	background-image:url("image/pexels-vladalex94-1402787.jpg");
+	background-repeat:no-repeat;
+	width:100%;
+	height:100vh;
+	background-size:cover;
+	}
+	.login{
+	
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	background:transparent;
+	color:white;
+	
+	}
+	.cover{
+	backdrop-filter:blur(5px);
+	
+	}
+	.card{
+	border-style:solid;
+	width:400px;
+	padding:30px 40px;
+	border-radius:20px;
+	
+	
+	}
+	#login{
+	font-weight:bold;
+	text-align:center;
+	color:white;
+	
+	
+	
+	}
+	input{
+	padding:10px;
+	background:transparent;
+	width:100%;
+	margin:20px 0px;
+	border-radius:20px;
+	border-style:none;
+	outline:none;
+	border:2px solid rgba(255,255,255,.2);
+
+	}
+	
+	.p{
+	position:relative;
+	
+	}
+	#icon{
+	position:absolute;
+	top:33px;
+	right:20px;
+	
+	}
+	.p1{
+	position:relative;
+	
+	}
+	#icon1{
+	position:absolute;
+	top:33px;
+	right:20px;
+	
+	}
+	.p input::placeholder{
+	color:white;
+	}
+	.p1 input::placeholder{
+	color:white;
+	}
+	p{
+	text-align:center;
+	}
+	</style>
+	<body>
+		
+		<div class="login">
+		<div class="cover">
+			<div class="card">
+			<form id="f" action="file:///C:/Users/dhine/OneDrive/Desktop/c	ar/index.html" method="POST" onsubmit="return validate()">
+				<h1 id="login">LOGIN</h1>
+				<div class="p">
+					<input	type="text" placeholder="username" id="box1" ><i class="glyphicon glyphicon-user"id="icon"></i>
+					<p id="para1" style="color:red"></p>
+				</div>
+				<div class="p1">
+				<input type="password" placeholder="password" id="box2"><i class="glyphicon glyphicon-lock"id="icon1"></i>
+					<p id="para2" style="color:red"></p>
+				</div>
+				<input type="submit" value="login" style="color:black;background-color:white;font-weight:bold;" class="ho">
+				<p>Don not have an accont? <b>Register</b>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script>
+	function validate(){
+		var user=document.getElementById("box1");
+		var password1=document.getElementById("box2");
+		if(user.value==""){
+			document.getElementById("para1").innerHTML="username will not empty"
+			user.focus();
+			user.style.border="1px solid red";
+			return false;
+		
+		}
+		if(!isNaN(user.value)){
+				document.getElementById("para1").innerHTML="you don not give number";
+				user.focus();
+				user.style.border="1px solid red";
+				return false;
+		}
+		
+		
+		if(password1.value==""){
+			document.getElementById("para2").innerHTML="password will not Empty";
+			password1.focus();
+			password1.style.border="1px solid red";
+			return false;
+			
+		}
+		if (password1.value.length<8){
+			document.getElementById("para2").innerHTML="password mimum 8 chracter ";
+			password1.focus();
+			password1.style.border="1px solid red";
+			return false;
+		}
+
+		
+	}
+	
+	</script>
+	</body>
+
+</html>
